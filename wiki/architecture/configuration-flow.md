@@ -1,7 +1,7 @@
 # Configuration and state flow
 
 <p align="center">
-  <img src="../images/architecture-configuration-flow.svg" alt="Configuration and state flow banner" width="1000" />
+  <img src="../images/cinematic/automation-pipeline.png" alt="Cinematic automation pipeline connecting migration stages" width="1000" />
 </p>
 
 A profile describes desired infrastructure. The driver combines that profile

@@ -1,7 +1,7 @@
 # Migration command reference
 
 <p align="center">
-  <img src="../images/reference-commands.svg" alt="Migration command reference banner" width="1000" />
+  <img src="../images/cinematic/automation-pipeline.png" alt="Cinematic automation pipeline connecting migration stages" width="1000" />
 </p>
 
 Run the entry point from the repository root in PowerShell 7.2 or later.

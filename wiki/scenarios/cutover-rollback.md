@@ -1,8 +1,10 @@
 # Cut over and practice rollback
 
 <p align="center">
-  <img src="../images/scenarios-cutover-rollback.svg" alt="Cut over and practice rollback banner" width="1000" />
+  <img src="../images/cinematic/cutover-rollback.png" alt="Cinematic traffic switch between source and target" width="1000" />
 </p>
+
+*Switch private DNS only after validation, with target writes disabled throughout the acceptance window.*
 
 ## Objective
 

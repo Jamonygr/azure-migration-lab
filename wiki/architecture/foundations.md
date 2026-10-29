@@ -1,7 +1,7 @@
 # Migration foundations
 
 <p align="center">
-  <img src="../images/architecture-foundations.svg" alt="Migration foundations banner" width="1000" />
+  <img src="../images/cinematic/security-foundations.png" alt="Shield and cloud representing migration security foundations" width="1000" />
 </p>
 
 A landing zone prepares a destination. A migration moves a workload into that

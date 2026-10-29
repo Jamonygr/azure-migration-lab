@@ -1,7 +1,7 @@
 # Azure Migration Lab — A-to-Z guide
 
 <p align="center">
-  <img src="images/book.svg" alt="Azure Migration Lab book banner" width="1000" />
+  <img src="images/cinematic/migration-playbook.png" alt="Migration playbook with a luminous path from source to cloud" width="1000" />
 </p>
 
 This guide explains the whole exercise as one migration story. Use it before the

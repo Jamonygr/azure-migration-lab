@@ -1,8 +1,10 @@
 # Accept the target and retire the source
 
 <p align="center">
-  <img src="../images/scenarios-accept-retire.svg" alt="Accept the target and retire the source banner" width="1000" />
+  <img src="../images/cinematic/accept-retire.png" alt="Cinematic target acceptance and source retirement" width="1000" />
 </p>
+
+*Accept the verified target before enabling its writes and retiring the source.*
 
 ## Objective
 

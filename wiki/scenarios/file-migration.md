@@ -1,8 +1,10 @@
 # Migrate and verify file content
 
 <p align="center">
-  <img src="../images/scenarios-file-migration.svg" alt="Migrate and verify file content banner" width="1000" />
+  <img src="../images/cinematic/file-migration.png" alt="Files streaming from a source share into cloud storage" width="1000" />
 </p>
+
+*Transfer the sample files and verify their paths, counts, and content at the destination.*
 
 ## Objective
 

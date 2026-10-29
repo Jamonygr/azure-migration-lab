@@ -1,7 +1,7 @@
 # Terraform module and stack guide
 
 <p align="center">
-  <img src="../images/modules-readme.svg" alt="Terraform module and stack guide banner" width="1000" />
+  <img src="../images/cinematic/automation-pipeline.png" alt="Cinematic automation pipeline connecting migration stages" width="1000" />
 </p>
 
 The infrastructure uses small reusable modules and four orchestration roots.

@@ -1,7 +1,7 @@
 # Extend to a real on-premises source
 
 <p align="center">
-  <img src="../images/scenarios-real-onpremises.svg" alt="Extend to a real on-premises source banner" width="1000" />
+  <img src="../images/cinematic/source-to-cloud.png" alt="Source servers connected to a luminous cloud destination" width="1000" />
 </p>
 
 The baseline uses an Azure VM to make the learning exercise self-contained.

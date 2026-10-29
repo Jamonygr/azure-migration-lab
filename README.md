@@ -1,5 +1,12 @@
 # Azure Migration Lab
 
+<p align="center">
+  <img src="wiki/images/cinematic/azure-migration-hero.png" alt="Azure Migration Terraform Lab — crystalline violet and chrome title above a glowing source-to-cloud migration bridge" width="1000" />
+</p>
+
+Discover the source, rehearse the move, and migrate the application, database,
+and files through a controlled cutover.
+
 [![Terraform](https://img.shields.io/badge/Terraform-IaC-844FBA?logo=terraform&logoColor=white)](https://developer.hashicorp.com/terraform)
 [![Azure](https://img.shields.io/badge/Azure-West%20Europe-0078D4)](https://azure.microsoft.com/)
 [![PowerShell](https://img.shields.io/badge/PowerShell-7-5391FE?logo=powershell&logoColor=white)](https://learn.microsoft.com/powershell/)
@@ -9,8 +16,6 @@ A practical migration lab for moving a small Windows application, relational
 data, and files into an Azure target environment. It follows the visual,
 documentation, and Terraform conventions of
 [Azure Landing Zone Lab](https://github.com/Jamonygr/azure-landing-zone-lab).
-
-![Azure Migration Lab](wiki/images/diagrams/hero-migration.svg)
 
 The source runs IIS, SQL Server 2022 Express, and an SMB share on a Windows
 Server 2022 VM. The target runs the application on a newly built IIS VM,
@@ -55,6 +60,17 @@ flowchart LR
   optional backup, and cost controls.
 - A book-style guide, scenario workbook, diagrams, operational templates,
   generated Terraform references, checks, and CI configuration.
+
+## Your migration journey
+
+| Discover and assess | Move the workload | Validate and cut over |
+|---|---|---|
+| ![Discovery scanner over the source servers](wiki/images/cinematic/discover-assess.png) | ![Database streaming into the Azure target](wiki/images/cinematic/sql-migration.png) | ![Private traffic switch between source and destination](wiki/images/cinematic/cutover-rollback.png) |
+| Inventory the source and plan migration waves. [Start discovery](wiki/scenarios/discover-assess.md). | Rebuild IIS, import SQL, and transfer files. [Open the workbook](wiki/scenarios/README.md). | Prove the target before acceptance. [Practice cutover and rollback](wiki/scenarios/cutover-rollback.md). |
+
+The [visual gallery](wiki/reference/visual-gallery.md) collects all 12 cinematic
+illustrations. Technical diagrams below and throughout the wiki describe the
+actual resource relationships and migration boundaries.
 
 ## Start here
 
@@ -117,6 +133,7 @@ It contains state and operation evidence; never commit it.
 | [State and secrets](wiki/reference/state-and-secrets.md) | Resource ownership and recovery |
 | [Testing](wiki/testing/lab-testing-guide.md) | Static and live verification |
 | [Operational templates](docs/templates/README.md) | Assessment, waves, cutover, acceptance |
+| [Visual gallery](wiki/reference/visual-gallery.md) | Cinematic chapter art and visual style |
 | [Contributing](CONTRIBUTING.md) | Change and validation expectations |
 
 ## Project status and license

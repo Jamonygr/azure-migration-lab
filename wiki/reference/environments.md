@@ -1,7 +1,7 @@
 # Environment profiles
 
 <p align="center">
-  <img src="../images/reference-environments.svg" alt="Environment profiles banner" width="1000" />
+  <img src="../images/cinematic/source-to-cloud.png" alt="Source servers connected to a luminous cloud destination" width="1000" />
 </p>
 
 Profiles keep the same migration workflow while changing supporting network and

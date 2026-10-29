@@ -1,7 +1,7 @@
 # Cost planning and cleanup
 
 <p align="center">
-  <img src="../images/reference-costs.svg" alt="Cost planning and cleanup banner" width="1000" />
+  <img src="../images/cinematic/source-to-cloud.png" alt="Source servers connected to a luminous cloud destination" width="1000" />
 </p>
 
 The default is cost-conscious, but the source simulator and target are real

@@ -1,7 +1,7 @@
 # CI/CD and operating model
 
 <p align="center">
-  <img src="../images/reference-pipeline.svg" alt="CI/CD and operating model banner" width="1000" />
+  <img src="../images/cinematic/automation-pipeline.png" alt="Cinematic automation pipeline connecting migration stages" width="1000" />
 </p>
 
 Automated quality checks should make repository changes reviewable. Live

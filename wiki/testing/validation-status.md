@@ -1,14 +1,16 @@
 # Validation record — 29 October 2026
 
 <p align="center">
-  <img src="../images/testing-validation-status.svg" alt="Validation record — 29 October 2026 banner" width="1000" />
+  <img src="../images/cinematic/rehearsal-validation.png" alt="Cinematic rehearsal and validation checkpoint" width="1000" />
 </p>
+
+*Track local checks and live migration evidence separately; artwork does not indicate a completed Azure run.*
 
 ## Local validation completed
 
 The complete local quality gate passed on 29 October 2026. The initial
 repository was authored and tested locally; a successful live Azure migration
-is **not claimed**. The initial delivery commit is available through `git log -1`.
+is **not claimed**. The initial delivery commit is `ec856ea`.
 
 | Validation area | Status | Evidence |
 |---|---|---|
@@ -30,6 +32,25 @@ is **not claimed**. The initial delivery commit is available through `git log -1
 | Cutover and rollback | Not run | Requires private DNS/application checks |
 | Acceptance and source retirement | Not run | Requires complete lifecycle run |
 | Azure teardown | Not run | No deployment created by the initial package |
+
+## Cinematic artwork update — 29 October 2026
+
+Added 12 PNG illustrations, updated the README and all 29 existing wiki chapter
+covers, and added a visual gallery. This update changes documentation and
+artwork only; the infrastructure, migration scripts, and application are unchanged.
+
+| Validation area | Status | Evidence |
+|---|---|---|
+| Image decoding and dimensions | Passed | All 12 PNGs fully decoded; each is 1672 × 941 pixels; 30.63 MiB combined |
+| Visual review | Passed | All titles checked for spelling, legibility, safe margins, and consistent cyan/violet/chrome styling |
+| Documentation links | Passed | `node scripts/quality/Test-Documentation.mjs`; local links, anchors, and image references resolve; original 35 SVGs retained |
+| Documentation preview | Passed locally | README, visual gallery, and SQL chapter rendered in Edge at desktop and mobile widths; no broken local images or page overflow |
+| Whitespace check | Passed | `git diff --check` |
+| Infrastructure/application/cloud checks | Not run for this update | Artwork-only scope; original package results and live-validation limitations remain as recorded above |
+
+Preview screenshots and the image metadata report are in the ignored
+`work/visual-cinematic/` folder. These local previews do not assert a published
+GitHub rendering or a live Azure deployment.
 
 ## Reproduce the package checks
 

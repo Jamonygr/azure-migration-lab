@@ -1,8 +1,10 @@
 # Prepare the migration lab
 
 <p align="center">
-  <img src="../images/scenarios-prepare.svg" alt="Prepare the migration lab banner" width="1000" />
+  <img src="../images/cinematic/security-foundations.png" alt="Shield and cloud representing migration security foundations" width="1000" />
 </p>
+
+*Prepare identities, network access, and isolated environments before moving the workload.*
 
 ## Objective
 

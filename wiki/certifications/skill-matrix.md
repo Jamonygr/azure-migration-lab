@@ -1,8 +1,10 @@
 # Migration skills and evidence matrix
 
 <p align="center">
-  <img src="../images/certifications-skill-matrix.svg" alt="Migration skills and evidence matrix banner" width="1000" />
+  <img src="../images/cinematic/migration-playbook.png" alt="Migration playbook with a luminous path from source to cloud" width="1000" />
 </p>
+
+*Connect each migration capability to an exercise and evidence you can inspect.*
 
 | Capability | Exercise | Evidence to produce |
 |---|---|---|

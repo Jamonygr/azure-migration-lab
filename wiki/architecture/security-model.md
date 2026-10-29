@@ -1,7 +1,7 @@
 # Security and identity model
 
 <p align="center">
-  <img src="../images/architecture-security-model.svg" alt="Security and identity model banner" width="1000" />
+  <img src="../images/cinematic/security-foundations.png" alt="Shield and cloud representing migration security foundations" width="1000" />
 </p>
 
 The lab separates infrastructure control, migration access, and application

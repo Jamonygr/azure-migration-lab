@@ -1,7 +1,7 @@
 # Live migration validation
 
 <p align="center">
-  <img src="../images/testing-live-provisioning-validation.svg" alt="Live migration validation banner" width="1000" />
+  <img src="../images/cinematic/rehearsal-validation.png" alt="Cinematic rehearsal and validation checkpoint" width="1000" />
 </p>
 
 This procedure defines the evidence needed for a verified live lab. It creates

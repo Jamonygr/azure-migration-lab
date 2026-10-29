@@ -1,8 +1,10 @@
 # Migrate the sample SQL database
 
 <p align="center">
-  <img src="../images/scenarios-sql-migration.svg" alt="Migrate the sample SQL database banner" width="1000" />
+  <img src="../images/cinematic/sql-migration.png" alt="Data flowing from a source database to a cloud database" width="1000" />
 </p>
+
+*Move a consistent database copy, then compare its schema and data before acceptance.*
 
 ## Objective
 

@@ -1,8 +1,10 @@
 # Discover and assess the workload
 
 <p align="center">
-  <img src="../images/scenarios-discover-assess.svg" alt="Discover and assess the workload banner" width="1000" />
+  <img src="../images/cinematic/discover-assess.png" alt="Holographic discovery scanner inspecting source servers" width="1000" />
 </p>
+
+*Discovery turns a running workload into an inventory, dependency map, and migration decision.*
 
 ## Objective
 

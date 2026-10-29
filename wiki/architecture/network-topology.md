@@ -1,7 +1,7 @@
 # Network topology
 
 <p align="center">
-  <img src="../images/architecture-network-topology.svg" alt="Network topology banner" width="1000" />
+  <img src="../images/cinematic/source-to-cloud.png" alt="Source servers connected to a luminous cloud destination" width="1000" />
 </p>
 
 The source and target occupy separate, non-overlapping private address spaces.

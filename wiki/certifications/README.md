@@ -1,7 +1,7 @@
 # Certification study alignment
 
 <p align="center">
-  <img src="../images/certifications-readme.svg" alt="Certification study alignment banner" width="1000" />
+  <img src="../images/cinematic/migration-playbook.png" alt="Migration playbook with a luminous path from source to cloud" width="1000" />
 </p>
 
 This lab supports selected Azure administration, architecture, and DevOps

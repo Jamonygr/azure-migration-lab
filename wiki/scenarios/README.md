@@ -1,7 +1,7 @@
 # Migration scenario workbook
 
 <p align="center">
-  <img src="../images/scenarios-readme.svg" alt="Migration scenario workbook banner" width="1000" />
+  <img src="../images/cinematic/migration-playbook.png" alt="Migration playbook with a luminous path from source to cloud" width="1000" />
 </p>
 
 Work through these phases in order. Record actual command results and evidence

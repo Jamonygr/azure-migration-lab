@@ -1,8 +1,10 @@
 # Rehearse before the migration window
 
 <p align="center">
-  <img src="../images/scenarios-rehearsal.svg" alt="Rehearse before the migration window banner" width="1000" />
+  <img src="../images/cinematic/rehearsal-validation.png" alt="Cinematic rehearsal and validation checkpoint" width="1000" />
 </p>
+
+*Test the target directly while the normal application name continues to resolve to the source.*
 
 ## Objective
 

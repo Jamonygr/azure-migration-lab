@@ -1,7 +1,7 @@
 # Testing and evidence guide
 
 <p align="center">
-  <img src="../images/testing-lab-testing-guide.svg" alt="Testing and evidence guide banner" width="1000" />
+  <img src="../images/cinematic/rehearsal-validation.png" alt="Cinematic rehearsal and validation checkpoint" width="1000" />
 </p>
 
 Tests answer different questions. Keep static correctness, Azure provisioning,

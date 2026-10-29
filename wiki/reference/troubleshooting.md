@@ -1,7 +1,7 @@
 # Troubleshooting and recovery
 
 <p align="center">
-  <img src="../images/reference-troubleshooting.svg" alt="Troubleshooting and recovery banner" width="1000" />
+  <img src="../images/cinematic/rehearsal-validation.png" alt="Cinematic rehearsal and validation checkpoint" width="1000" />
 </p>
 
 Start with the failing stage's timestamped evidence. Identify whether the failure

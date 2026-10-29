@@ -1,7 +1,7 @@
 # State, secrets, and recovery
 
 <p align="center">
-  <img src="../images/reference-state-and-secrets.svg" alt="State, secrets, and recovery banner" width="1000" />
+  <img src="../images/cinematic/security-foundations.png" alt="Shield and cloud representing migration security foundations" width="1000" />
 </p>
 
 A migration has several kinds of state. Recovering only one does not recover

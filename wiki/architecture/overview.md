@@ -1,7 +1,7 @@
 # Architecture overview
 
 <p align="center">
-  <img src="../images/architecture-overview.svg" alt="Architecture overview banner" width="1000" />
+  <img src="../images/cinematic/source-to-cloud.png" alt="Source servers connected to a luminous cloud destination" width="1000" />
 </p>
 
 The lab has a source site, a target site, and a small shared foundation.

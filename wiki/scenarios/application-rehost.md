@@ -1,8 +1,10 @@
 # Rebuild and rehost the application
 
 <p align="center">
-  <img src="../images/scenarios-application-rehost.svg" alt="Rebuild and rehost the application banner" width="1000" />
+  <img src="../images/cinematic/application-rehost.png" alt="Application package crossing from a source server to a cloud target" width="1000" />
 </p>
+
+*Rebuild the destination host, transfer the application package, and verify its target dependencies.*
 
 ## Objective
 
