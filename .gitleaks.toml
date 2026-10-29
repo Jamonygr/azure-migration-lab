@@ -1,0 +1,6 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Generated local tools, provider caches, build output, and ignored runtime artifacts"
+paths = ['''(^|[/\\])(work|\.terraform|\.git|bin|obj)([/\\])''']

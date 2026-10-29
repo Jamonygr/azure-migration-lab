@@ -1,0 +1,20 @@
+# Standalone Windows migration lab. Supply subscription_id in a local ignored file or TF_VAR_subscription_id.
+environment          = "lab"
+location             = "westeurope"
+project              = "azmig"
+owner                = "Lab-User"
+source_vm_size       = "Standard_B2ms"
+target_vm_size       = "Standard_B2s"
+source_address_space = "10.100.0.0/16"
+target_address_space = "10.200.0.0/16"
+enable_nat           = false
+enable_monitoring    = true
+enable_workbooks     = true
+enable_backup        = true
+enable_policy        = false
+enable_public_rdp    = false
+allowed_rdp_cidrs    = []
+budget_amount        = 25
+budget_emails        = []
+budget_start_date    = null
+auto_shutdown_time   = "2000"

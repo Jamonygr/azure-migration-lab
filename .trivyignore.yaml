@@ -1,0 +1,9 @@
+misconfigurations:
+  - id: AZU-0016
+    paths:
+      - modules/keyvault/main.tf
+    statement: Disposable synthetic lab vault allows purge for teardown. Soft delete is enabled; production adoption requires purge protection. See SECURITY_EXCEPTIONS.md.
+  - id: AZU-0068
+    paths:
+      - modules/windows-vm/main.tf
+    statement: Scanner cannot resolve the module NIC ID. Each Windows VM explicitly references azurerm_network_interface.this.id; mocked root wiring tests cover the attachment.

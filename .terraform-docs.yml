@@ -1,0 +1,7 @@
+formatter: markdown table
+sort:
+  enabled: true
+  by: name
+settings:
+  anchor: true
+  hide-empty: true

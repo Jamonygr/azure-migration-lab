@@ -1,0 +1,83 @@
+name: Migration lab
+# checkov:skip=CKV_GHA_7:Manual operations require constrained stage/profile inputs; protected main/environment approvals and argument-safe environment variables guard execution. This workflow does not publish build artifacts.
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Isolated lab profile
+        type: choice
+        options: [cheap-lab, dev, lab, prod]
+        default: cheap-lab
+        required: true
+      stage:
+        description: Explicit operation (no automatic deployment)
+        type: choice
+        options: [Preflight, Plan, Provision, Seed, Discover, Assess-Export, Rehearse, Reset-Target, Migrate, Validate, Cutover, Rollback, Accept, Retire-Source, Destroy]
+        required: true
+      stack:
+        description: Stack to plan; other stages follow dependencies
+        type: choice
+        options: [foundation, source, target, cutover]
+        default: foundation
+      confirmation:
+        description: Required confirmation text for destructive/irreversible stages (see setup guide)
+        type: string
+        default: ''
+permissions:
+  contents: read
+concurrency:
+  group: azure-migration-lab-${{ inputs.environment }}
+  cancel-in-progress: false
+jobs:
+  operation:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    environment: ${{ inputs.environment }}-${{ inputs.stage == 'Destroy' && 'destroy' || inputs.stage == 'Plan' && 'plan' || 'apply' }}
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3
+        with:
+          terraform_version: 1.15.8
+          terraform_wrapper: false
+      - name: Install verified policy tools
+        shell: pwsh
+        run: ./scripts/quality/Install-QualityTools.ps1
+      - uses: azure/login@7184910d9eb2b1c5e48f7073824a90609bb9b6d6 # v2
+        with:
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+      - name: Run selected stage and persist recovery checkpoint
+        shell: pwsh
+        env:
+          LAB_ENVIRONMENT: ${{ inputs.environment }}
+          LAB_STAGE: ${{ inputs.stage }}
+          LAB_STACK: ${{ inputs.stack }}
+          LAB_CONFIRMATION: ${{ inputs.confirmation }}
+          LAB_OWNER: ${{ vars.LAB_OWNER }}
+          LAB_STATE_RG: ${{ vars.STATE_RESOURCE_GROUP }}
+          LAB_STATE_ACCOUNT: ${{ vars.STATE_STORAGE_ACCOUNT }}
+          LAB_STATE_CONTAINER: ${{ vars.STATE_CONTAINER }}
+          ARM_CLIENT_ID: ${{ vars.AZURE_CLIENT_ID }}
+          ARM_TENANT_ID: ${{ vars.AZURE_TENANT_ID }}
+          ARM_SUBSCRIPTION_ID: ${{ vars.AZURE_SUBSCRIPTION_ID }}
+          ARM_USE_OIDC: 'true'
+          ARM_USE_AZUREAD: 'true'
+        run: |
+          $ErrorActionPreference = 'Stop'
+          foreach ($name in 'LAB_STATE_RG','LAB_STATE_ACCOUNT','LAB_STATE_CONTAINER','LAB_OWNER') {
+            if (-not [Environment]::GetEnvironmentVariable($name)) { throw "Configure environment variable $name first." }
+          }
+          $checkpoint = @{ Environment=$env:LAB_ENVIRONMENT; StorageAccount=$env:LAB_STATE_ACCOUNT; Container=$env:LAB_STATE_CONTAINER }
+          ./scripts/quality/Sync-LabCheckpoint.ps1 @checkpoint -Direction Download
+          try {
+            ./scripts/Invoke-Lab.ps1 -Stage $env:LAB_STAGE -Environment $env:LAB_ENVIRONMENT -Stack $env:LAB_STACK -SubscriptionId $env:ARM_SUBSCRIPTION_ID -Owner $env:LAB_OWNER -ConfirmAction $env:LAB_CONFIRMATION -BackendResourceGroup $env:LAB_STATE_RG -BackendStorageAccount $env:LAB_STATE_ACCOUNT -BackendContainer $env:LAB_STATE_CONTAINER
+          } finally {
+            ./scripts/quality/Sync-LabCheckpoint.ps1 @checkpoint -Direction Upload
+          }

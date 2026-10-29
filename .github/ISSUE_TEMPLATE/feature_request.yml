@@ -1,0 +1,11 @@
+name: Migration exercise proposal
+description: Propose a new learning scenario.
+body:
+  - type: textarea
+    id: outcome
+    attributes: {label: Learning outcome and workload}
+    validations: {required: true}
+  - type: textarea
+    id: validation
+    attributes: {label: Success criteria, cost, and cleanup}
+    validations: {required: true}

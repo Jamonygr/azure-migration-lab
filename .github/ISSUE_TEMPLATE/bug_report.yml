@@ -1,0 +1,19 @@
+name: Bug report
+description: Report a failed deployment, migration, or documentation instruction.
+body:
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options: [cheap-lab, dev, lab, prod, offline validation]
+    validations: {required: true}
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction and expected result
+      description: Include the stage, tool versions, and sanitized error. Never include state, BACPACs, or tokens.
+    validations: {required: true}
+  - type: textarea
+    id: actual
+    attributes: {label: Actual result and recovery status}
+    validations: {required: true}
